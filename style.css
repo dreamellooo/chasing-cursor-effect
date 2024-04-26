@@ -1,0 +1,192 @@
+@font-face {
+    font-family: nb;
+    src: url(./fonts/NBInternationalProBoo.woff2);
+}
+
+@font-face {
+    font-family: rejouice;
+    src: url(./fonts/Rejouice-Headline.ttf);
+}
+
+h2 {
+    font-size: 4.6em;
+    font-weight: 100;
+    letter-spacing: -1px;
+}
+
+h3 {
+    font-size: 1.7em;
+    font-weight: 100;
+}
+
+h5 {
+    font-size: 1.3em;
+    font-weight: 500;
+}
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: 'nb';
+}
+
+html, body {
+    color: #0e0e0e;
+    background-color: #faf8f3;
+}
+
+#page1 {
+    height: 100vh;
+    width: 100%;
+    background-color: #dadada;
+    position: relative;
+    overflow: hidden;
+}
+
+#cursor {
+    height: 9em;
+    width: 9em;
+    background-color: #ff5f38;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translate(-50%, -50%);
+}
+
+#page1 video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+
+#page1-content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    z-index: 10;
+    color: #fff;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 3em;
+}
+
+#page1-content h1 {
+    white-space: nowrap;
+}
+
+#page1-content h1 span {
+    font-family: 'rejouice';
+    font-weight: 100;
+    font-size: 27vw;
+    line-height: 30vw;
+}
+
+#page2 {
+    height: 78vh;
+    width: 100%;
+    padding: 3em;
+    padding-top: 6em;
+}
+
+#nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding-bottom: 1.5em;
+    align-items:end;
+}
+
+hr {
+    margin-bottom: 15px;
+}
+
+
+#page2 h2 {
+    padding-right: .1em;
+}
+
+#page2 h2:first-child {
+    padding-left: 2em;
+}
+
+
+/* Mobile Styles */
+@media screen and (max-width: 767px){
+    
+    #page1-content h1 span {
+        font-size: 4em;
+        line-height: 50vw;
+    }
+
+    #page1-content h1 span:not(:first-child,:last-child) {
+        margin: -5px;
+    }
+
+    h2 {
+        font-size: 2.3em;
+    }
+
+    #page2 {
+        padding: 3em 2em;
+        height: 100vh;
+    }
+    
+    #page2 h2:first-child {
+        padding-left: 1em;
+    }
+
+    #page2 h3 {
+        font-size: 1em;
+    }
+
+    hr {
+        margin-bottom: 30px;
+    }
+}
+
+/* Tablet Styles */
+@media screen and (min-width: 768px) and (max-width: 1023px){
+    #page1-content h1 span {
+        font-size: 7em;
+        line-height: 35vw;
+    }
+
+    #page1-content h1 span:not(:first-child,:last-child) {
+        margin: -5.5px;
+    }
+
+    #page2 h2:first-child {
+        padding-left: 1em;
+    }
+
+    h2 {
+        font-size: 2.8em;
+    }
+
+    #page2 h3 {
+        font-size: 1.3em;
+    }
+
+    hr {
+        margin-bottom: 60px;
+    }
+
+    #page2 {
+        padding: 4em 3em;
+        height: 100vh;
+    }
+}
